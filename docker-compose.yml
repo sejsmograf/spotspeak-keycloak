@@ -31,8 +31,7 @@ services:
       - ./keycloakspi/target/keycloakspi-1.0-SNAPSHOT.jar:/opt/keycloak/providers/keycloakspi-1.0-SNAPSHOT.jar
       - ./themes:/opt/keycloak/themes
     ports:
-      - ${HTTP_PORT}:8080
-        # - ${HTTPS_PORT}:8443
+      - ${HTTP_PORT}:8080 # HTTPS is granted by reverse proxy (nginx)
 
 
 volumes:
