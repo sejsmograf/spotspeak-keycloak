@@ -1,13 +1,10 @@
-/* Patternfly CSS places a "bg-login.jpg" as the background on this ".login-pf" class.
-   This clashes with the "keycloak-bg.png' background defined on the body below.
-   Therefore the Patternfly background must be set to none. */
 .login-pf {
   background: none;
 }
 
 body {
   background: none !important;
-  background-color: #e0e0e0 !important;
+  background-color: #f0f0f0 !important;
 }
 
 .login-pf body {
@@ -518,10 +515,12 @@ ul#kc-totp-supported-apps {
 .card-pf {
   margin: 0 auto;
   box-shadow: var(--pf-global--BoxShadow--lg);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   padding: 0 20px;
   max-width: 500px;
   border-top: 4px solid;
   border-color: var(--pf-global--primary-color--100);
+  background-color: var;
 }
 
 /*phone*/
