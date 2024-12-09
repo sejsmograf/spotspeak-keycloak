@@ -1,10 +1,21 @@
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('../fonts/inconsolata.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  font-family: "Inconsolata", monospace;
+}
+
 .login-pf {
   background: none;
 }
 
 body {
   background: none !important;
-  background-color: #f0f0f0 !important;
+  background: linear-gradient(to bottom, white, #EBF8FF, #C1E1F4, #99DAFF) !important;
 }
 
 .login-pf body {
@@ -30,6 +41,16 @@ p.instruction {
 
 h1#kc-page-title {
   margin-top: 10px;
+  font-weight: bold;
+}
+
+input.pf-c-form-control {
+  border-radius: 5px;
+}
+
+input#kc-login {
+  background-color: #28a6dd; 
+  font-weight: bold;
 }
 
 #kc-locale ul {
@@ -520,7 +541,7 @@ ul#kc-totp-supported-apps {
   max-width: 500px;
   border-top: 4px solid;
   border-color: var(--pf-global--primary-color--100);
-  background-color: var;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*phone*/
@@ -532,6 +553,7 @@ ul#kc-totp-supported-apps {
     padding-top: 0;
     border-top: 0;
     box-shadow: 0 0;
+    box-shadow: var(--pf-global--BoxShadow--lg);
   }
 
   .kc-social-grid {
