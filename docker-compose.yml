@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:${POSTGRES_VERSION}
+    image: postgres:16-alpine
     environment:
       POSTGRES_DB: keycloak
       POSTGRES_USER: keycloak
@@ -10,7 +10,7 @@ services:
 
 
   keycloak:
-    image: quay.io/keycloak/keycloak:${KC_VERSION}
+    image: quay.io/keycloak/keycloak:25.0.6
     deploy:
     command: "start-dev"
     restart: always
@@ -31,7 +31,7 @@ services:
       - ./keycloakspi/target/keycloakspi-1.0-SNAPSHOT.jar:/opt/keycloak/providers/keycloakspi-1.0-SNAPSHOT.jar
       - ./themes:/opt/keycloak/themes
     ports:
-      - ${HTTP_PORT}:8080 # HTTPS is granted by reverse proxy (nginx)
+      - 8080:8080 # HTTPS is granted by reverse proxy (nginx)
 
 
 volumes:
